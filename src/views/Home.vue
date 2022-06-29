@@ -1,7 +1,7 @@
 <template>
   <div class="home">
+    <!-- 这是上面的工具栏 -->
     <Toolbar />
-
     <main>
       <!-- 左侧组件列表 -->
       <section class="left">
@@ -68,6 +68,7 @@ export default {
       reSelectAnimateIndex: undefined,
     };
   },
+  //这里是使用的vuex辅助函数 这里就相当于拿到了vuex里面的值 一个简写方式 如果vuex里面的值变了这也会跟着变
   computed: mapState([
     "componentData",
     "curComponent",
@@ -77,7 +78,7 @@ export default {
   ]),
   created() {
     this.restore();
-    // 全局监听按键事件
+    //全局监听按键事件
     listenGlobalKeyDown();
   },
   methods: {
@@ -155,6 +156,7 @@ export default {
   background: #fff;
 
   main {
+    //计算属性
     height: calc(100% - 64px);
     position: relative;
 
