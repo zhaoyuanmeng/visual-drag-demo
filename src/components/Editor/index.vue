@@ -10,7 +10,7 @@
     @contextmenu="handleContextMenu"
     @mousedown="handleMouseDown"
   >
-    <!-- 网格线 -->
+    <!-- 网格线 使用原生svg绘制的-->
     <Grid />
     <!--页面组件列表展示-->
     <Shape
@@ -44,7 +44,7 @@
         @input="handleInput"
       />
     </Shape>
-    <!-- 右击菜单 -->
+    <!-- 右击菜单 这个可以挺好玩的-->
     <ContextMenu />
     <!-- 标线 -->
     <MarkLine />
@@ -253,6 +253,7 @@ export default {
       return result;
     },
 
+    // 鼠标右键事件回调函数
     handleContextMenu(e) {
       e.stopPropagation();
       e.preventDefault();
@@ -321,6 +322,7 @@ export default {
     opacity: 0.5;
 
     &:hover {
+      // 禁止小手
       cursor: not-allowed;
     }
   }
