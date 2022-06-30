@@ -1,13 +1,8 @@
-import Vue from 'vue'
+import Vue from "vue";
 
-const components = [
-    'Picture',
-    'VText',
-    'VButton',
-    'Group',
-    'RectShape',
-]
+const components = ["Picture", "VText", "VButton", "Group", "RectShape"];
 
-components.forEach(key => {
-    Vue.component(key, () => import(`@/custom-component/${key}`))
-})
+// 全局注册
+components.forEach((name) => {
+  Vue.component(name, () => import(`@/custom-component/${name}`));
+});
