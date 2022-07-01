@@ -42,3 +42,8 @@
 ## 动态组件渲染 :is属性
 
 ## Vue.conponent Vue.extends
+
+##  preventDefault() 方法会取消该事件，这意味着属于该事件的默认操作将不会发生。
+
+
+## addEventListener
