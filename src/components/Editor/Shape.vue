@@ -136,6 +136,8 @@ export default {
 
       const up = () => {
         hasMove && this.$store.commit("recordSnapshot");
+        // 通过addEventListener()添加的事件处理程序只能使用removeEventListener()并传入与添加时同样的参数来移除。
+        // 这意味着使用addEventListener()添加的匿名函数无法移除
         document.removeEventListener("mousemove", move);
         document.removeEventListener("mouseup", up);
         this.cursors = this.getCursor(); // 根据旋转角度获取光标位置
